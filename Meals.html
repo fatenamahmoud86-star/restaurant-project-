@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Meals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Cairo';
+    background: linear-gradient(135deg, #1e1e2f, #ff512f);
+    color:white;
+    text-align:center;
+}
+
+table{
+    width:80%;
+    margin:auto;
+    background:white;
+    color:black;
+    border-collapse:collapse;
+}
+
+th{
+    background:#ff512f;
+    color:white;
+}
+
+th, td{
+    padding:10px;
+    border:1px solid #ddd;
+}
+
+button{
+    padding:6px 12px;
+    background:#ff512f;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<nav style="text-align:center; padding:15px;">
+
+<a href="home.html" style="
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+" onmouseover="this.style.color='#ffcc70'" onmouseout="this.style.color='white'">
+الرئيسية
+</a>
+
+<a href="AboutUs.html" style="
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+" onmouseover="this.style.color='#ffcc70'" onmouseout="this.style.color='white'">
+من نحن
+</a>
+
+<a href="Meals.html" style="
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+" onmouseover="this.style.color='#ffcc70'" onmouseout="this.style.color='white'">
+الوجبات
+</a>
+
+</nav>
+
+<h1>🍽️ قائمة الوجبات</h1>
+
+<table>
+
+<tr>
+<th>الرمز</th>
+<th>الوجبة</th>
+<th>السعر</th>
+<th>إظهار التفاصيل</th>
+<th>اختيار</th>
+</tr>
+
+<!-- 🍔 BURGERS -->
+
+<tr>
+<td>BG-001</td>
+<td>برغر كلاسيك</td>
+<td>80000 ل.س</td>
+<td><button onclick="toggleDetails('d1')">إظهار</button></td>
+<td><input type="checkbox" value="80000"></td>
+</tr>
+
+<tr id="d1" style="display:none;">
+<td colspan="5">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349" width="200"><br><br>
+
+<b>المطبخ:</b> أمريكي<br>
+<b>تصنيف الطعام:</b> وجبات سريعة<br><br>
+
+<b>المكونات:</b><br>
+• لحم بقري طازج<br>
+• خبز برغر<br>
+• خس وطماطم<br>
+• بصل<br><br>
+
+<b>الصلصات:</b><br>
+• مايونيز<br>
+• كاتشب<br><br>
+
+<b>الوصف:</b><br>
+برغر كلاسيكي غني بالنكهة يتم تحضيره من لحم بقري طازج مشوي بعناية،
+ويقدم داخل خبز طري مع خضار طازجة وصلصات لذيذة تعطي طعماً مميزاً.
+</td>
+</tr>
+
+<tr>
+<td>BG-002</td>
+<td>برغر بالجبنة</td>
+<td>90000 ل.س</td>
+<td><button onclick="toggleDetails('d2')">إظهار</button></td>
+<td><input type="checkbox" value="90000"></td>
+</tr>
+
+<tr id="d2" style="display:none;">
+<td colspan="5">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" width="200"><br><br>
+
+<b>المطبخ:</b> أمريكي<br>
+<b>التصنيف:</b> وجبات سريعة<br><br>
+
+<b>المكونات:</b><br>
+• لحم بقري<br>
+• جبنة شيدر<br>
+• خبز برغر<br><br>
+
+<b>الصلصات:</b><br>
+• مايونيز<br>
+• كاتشب<br><br>
+
+<b>الوصف:</b><br>
+برغر غني بطبقة جبنة ذائبة تضيف قواماً كريميّاً وطعماً مميزاً
+مع مزيج من الخضار الطازجة.
+</td>
+</tr>
+
+<tr>
+<td>BG-003</td>
+<td>برغر باربكيو</td>
+<td>95000 ل.س</td>
+<td><button onclick="toggleDetails('d3')">إظهار</button></td>
+<td><input type="checkbox" value="95000"></td>
+</tr>
+
+<tr id="d3" style="display:none;">
+<td colspan="5">
+<img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b" width="200">
+<br><br>
+
+<b>المطبخ:</b> أمريكي<br>
+<b>التصنيف:</b> وجبات سريعة<br><br>
+
+<b>المكونات:</b><br>
+• لحم مشوي<br>
+• خبز برغر<br><br>
+
+<b>الصلصات:</b><br>
+• صوص باربكيو مدخن<br><br>
+
+<b>الوصف:</b><br>
+برغر غني بالنكهة المدخنة مع صوص باربكيو مميز يمنح طعماً قوياً ولذيذاً.
+</td>
+</tr>
+
+<tr>
+<td>BG-004</td>
+<td>برغر دجاج</td>
+<td>85000 ل.س</td>
+<td><button onclick="toggleDetails('d4')">إظهار</button></td>
+<td><input type="checkbox" value="85000"></td>
+</tr>
+
+<tr id="d4" style="display:none;">
+<td colspan="5">
+<img src="https://images.unsplash.com/photo-1550317138-10000687a72b" width="200"><br><br>
+
+<b>المطبخ:</b> عالمي<br>
+<b>التصنيف:</b> وجبات سريعة<br><br>
+
+<b>المكونات:</b><br>
+• دجاج مقرمش<br>
+• خبز برغر<br>
+• خس<br><br>
+
+<b>الصلصات:</b><br>
+• مايونيز<br><br>
+
+<b>الوصف:</b><br>
+برغر دجاج مقرمش يقدم مع خضار طازجة وصوص مميز بطعم خفيف ولذيذ.
+</td>
+</tr>
+
+<tr>
+<td>BG-005</td>
+<td>برغر مزدوج</td>
+<td>100000 ل.س</td>
+<td><button onclick="toggleDetails('d5')">إظهار</button></td>
+<td><input type="checkbox" value="100000"></td>
+</tr>
+
+<tr id="d5" style="display:none;">
+<td colspan="5">
+<img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5" width="200"><br><br>
+
+<b>المطبخ:</b> أمريكي<br>
+<b>التصنيف:</b> وجبات سريعة<br><br>
+
+<b>المكونات:</b><br>
+• طبقتين لحم بقري<br>
+• خبز<br>
+• جبنة<br><br>
+
+<b>الصلصات:</b><br>
+• كاتشب<br>
+• مايونيز<br><br>
+
+<b>الوصف:</b><br>
+برغر ضخم مكون من طبقتين لحم مع جبنة مضاعفة لعشاق الوجبات الكبيرة.
+</td>
+</tr>
+<!-- 🍕 PIZZA -->
+<tr>
+<td>PZ-001</td>
+<td>بيتزا بيبروني</td>
+<td>90000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="90000"></td>
+</tr>
+
+<tr>
+<td>PZ-002</td>
+<td>بيتزا خضار</td>
+<td>85000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="85000"></td>
+</tr>
+
+<tr>
+<td>PZ-003</td>
+<td>بيتزا دجاج</td>
+<td>95000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="95000"></td>
+</tr>
+
+<!-- 🐟 FISH -->
+<tr>
+<td>FS-001</td>
+<td>سمك مشوي</td>
+<td>110000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="110000"></td>
+</tr>
+
+<tr>
+<td>FS-002</td>
+<td>سمك مقلي</td>
+<td>100000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="100000"></td>
+</tr>
+
+<!-- 🥟 PASTRIES -->
+<tr>
+<td>PT-001</td>
+<td>فطيرة جبنة</td>
+<td>60000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="60000"></td>
+</tr>
+
+<tr>
+<td>PT-002</td>
+<td>فطيرة لحمة</td>
+<td>70000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="70000"></td>
+</tr>
+
+<!-- 🍰 DESSERTS -->
+
+<tr>
+<td>DS-001</td>
+<td>كيك الشوكولا</td>
+<td>70000 ل.س</td>
+<td><button onclick="toggleDetails('d6')">إظهار</button></td>
+<td><input type="checkbox" value="70000"></td>
+</tr>
+<tr id="d6" style="display:none;">
+<td colspan="5">
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" width="200"><br><br>
+
+<b>المطبخ:</b> عالمي<br>
+<b>التصنيف:</b> حلويات<br><br>
+
+<b>المكونات:</b><br>
+• شوكولا<br>
+• طحين<br>
+• سكر<br>
+• بيض<br><br>
+
+<b>الوصف:</b><br>
+كيك شوكولا غني بطعم قوي وقوام ناعم يذوب في الفم مع طبقة شوكولا لذيذة.
+</td>
+</tr>
+
+<tr>
+<td>DS-002</td>
+<td>دونات</td>
+<td>50000 ل.س</td>
+<td><button onclick="toggleDetails('d7')">إظهار</button></td>
+<td><input type="checkbox" value="50000"></td>
+</tr>
+
+<tr id="d7" style="display:none;">
+<td colspan="5">
+<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" width="200"><br><br>
+
+<b>المطبخ:</b> أمريكي<br>
+<b>التصنيف:</b> حلويات<br><br>
+
+<b>المكونات:</b><br>
+• طحين<br>
+• سكر<br>
+• زيت<br><br>
+
+<b>الوصف:</b><br>
+دونات طازجة مقرمشة من الخارج وطرية من الداخل تقدم بنكهات متعددة.
+</td>
+</tr>
+<!-- 🧃 DRINKS -->
+<tr>
+<td>DR-001</td>
+<td>كولا</td>
+<td>10000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="10000"></td>
+</tr>
+
+<tr>
+<td>DR-002</td>
+<td>عصير برتقال</td>
+<td>15000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="15000"></td>
+</tr>
+
+<tr>
+<td>DR-003</td>
+<td>عصير مانجا</td>
+<td>18000 ل.س</td>
+<td>-</td>
+<td><input type="checkbox" value="18000"></td>
+</tr>
+
+</table>
+<br>
+<button onclick="showForm()">متابعة</button>
+
+<div id="orderForm" style="display:none; margin-top:20px;">
+
+<h2>📝 معلومات الطلب</h2>
+
+<input type="text" id="name" placeholder="الاسم الكامل (عربي)">
+<br><br>
+
+<input type="text" id="national" placeholder="الرقم الوطني (11 رقم)">
+<br><br>
+
+<input type="text" id="birth" placeholder="تاريخ الميلاد dd-mm-yyyy">
+<br><br>
+
+<input type="text" id="phone" placeholder="رقم الموبايل">
+<br><br>
+
+<input type="email" id="email" placeholder="الإيميل">
+<br><br>
+
+<button onclick="submitOrder()">إرسال</button>
+
+<!-- 🔥 هون النتيجة -->
+<div id="finalResult" style="margin-top:20px;"></div>
+
+</div>
+
+<script>
+
+// إظهار التفاصيل
+function toggleDetails(id){
+let x = document.getElementById(id);
+x.style.display = (x.style.display === "none") ? "table-row" : "none";
+}
+
+// إظهار الفورم
+function showForm(){
+document.getElementById("orderForm").style.display = "block";
+}
+
+// إرسال الطلب
+function submitOrder(){
+
+let name = document.getElementById("name").value;
+let national = document.getElementById("national").value;
+let birth = document.getElementById("birth").value;
+let phone = document.getElementById("phone").value;
+
+// تحقق الرقم الوطني
+if(!/^[0-9]{11}$/.test(national)){
+    alert("❌ الرقم الوطني غير صحيح");
+    return;
+}
+
+// الاسم عربي
+if(name && !/^[\u0600-\u06FF\s]+$/.test(name)){
+    alert("❌ الاسم يجب أن يكون بالعربي");
+    return;
+}
+
+// التاريخ
+if(birth && !/^\d{2}-\d{2}-\d{4}$/.test(birth)){
+    alert("❌ التاريخ غير صحيح");
+    return;
+}
+
+// الموبايل
+if(phone && !/^09\d{8}$/.test(phone)){
+    alert("❌ رقم الموبايل غير صحيح");
+    return;
+}
+
+// الحساب
+let items = document.querySelectorAll('input[type="checkbox"]:checked');
+let total = 0;
+let text = "";
+
+items.forEach(i=>{
+    total += parseFloat(i.value);
+    let meal = i.parentElement.parentElement.children[1].innerText;
+    text += meal + "<br>";
+});
+
+let final = total - (total * 0.05);
+
+// النتيجة
+document.getElementById("finalResult").innerHTML =
+"✅ تم إرسال الطلب!<br><br>" +
+"🧾 طلبك:<br>" + text +
+"<br>💰 السعر: " + total +
+"<br>✨ بعد الخصم: " + final.toFixed(2);
+
+}
+
+</script>
+<br><br>
+
+<a href="home.html" style="
+text-decoration:none;
+color:white;
+background-color:#e74c3c;
+padding:10px 20px;
+border-radius:10px;
+font-size:16px;
+">
+خروج
+</a>
+</body>
+</html>
